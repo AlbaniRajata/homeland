@@ -16,10 +16,8 @@
 
     <!--  imported css file -->
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="{{asset('assets/fonts/icomoon/style.css')}}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
@@ -30,16 +28,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon/font/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fl-bigmug-line.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-
 <body>
     <div id="app">
            <div class="site-navbar mt-4">
@@ -50,9 +44,7 @@
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
-
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
                     <a href="{{ url('/') }}">Home</a>
@@ -65,50 +57,43 @@
                       <li><a href="#">Condo</a></li>
                       <li><a href="#">Property Land</a></li>
                       <li><a href="#">Commercial Building</a></li>
-
                     </ul>
                   </li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
                   @guest
-                        @if (Route::has('login'))
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                        @endif
-                        @if (Route::has('register'))
-                        <li><a href="{{ route('register') }}">Register</a></li>
-                        @endif
+                    @if (Route::has('login'))
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                    @endif
+                    @if (Route::has('register'))
+                    <li><a href="{{ route('register') }}">Register</a></li>
+                    @endif
                   @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                    <li class="nav-item dropdown">
+                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                          </form>
+                      </div>
+                    </li>
+                @endguest
                 </ul>
               </nav>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
-
-    {{-- <div class="slide-one-item home-slider owl-carousel">
-
+    <div class="slide-one-item home-slider owl-carousel">
       <div class="site-blocks-cover overlay" style="background-image: url({{asset('assets/images/hero_bg_1.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -121,7 +106,6 @@
           </div>
         </div>
       </div>
-
       <div class="site-blocks-cover overlay" style="background-image: url({{asset('assets/images/hero_bg_2.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -134,14 +118,11 @@
           </div>
         </div>
       </div>
-
-    </div> --}}
-
+    </div>
         <main class="py-4">
-            @yield('content')
+          @yield('content')
         </main>
     </div>
-
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -150,9 +131,6 @@
               <h3 class="footer-heading mb-4">About Homeland</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
             </div>
-
-
-
           </div>
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
@@ -176,24 +154,16 @@
                 </ul>
               </div>
             </div>
-
-
           </div>
-
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Follow Us</h3>
-
-                <div>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                </div>
-
-
-
+              <div>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
           </div>
-
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
@@ -203,7 +173,6 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
-
         </div>
       </div>
     </footer>
@@ -220,8 +189,6 @@
     <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('assets/js/aos.js') }}"></script>
-
     <script src="{{ asset('assets/js/main.js')}}"></script>
 </body>
-
 </html>
