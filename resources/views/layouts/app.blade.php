@@ -107,7 +107,7 @@
       </div>
     </div>
 
-    <div class="slide-one-item home-slider owl-carousel">
+    {{-- <div class="slide-one-item home-slider owl-carousel">
 
       <div class="site-blocks-cover overlay" style="background-image: url({{asset('assets/images/hero_bg_1.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -135,7 +135,7 @@
         </div>
       </div>
 
-    </div>
+    </div> --}}
 
         <main class="py-4">
             @yield('content')
